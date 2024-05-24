@@ -14,7 +14,8 @@
 		"istream": "cpp",
 		"string": "cpp",
 		"ostream": "cpp",
-		"iosfwd": "cpp"
+		"iosfwd": "cpp",
+		"format": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "enabled"
 }

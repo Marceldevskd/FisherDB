@@ -1,19 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <vector>
+#include <main.h>
 
 using namespace std;
 
-string toLowerCase(string str)
-{
-	for (int i = 0; i < str.length(); i++)
-	{
-		str[i] = tolower(str[i]);
-	}
-	return str;
-}
 
 void runQuery(string query)
 {
