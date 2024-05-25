@@ -1,8 +1,10 @@
 # FisherDB
+
 A hobby SQL based database system made in c++  
 
 Example file structure:  
-```md 
+
+```md
 - FisherDB
   - src
     - query_runners

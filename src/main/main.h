@@ -4,3 +4,5 @@
 #include <sstream>
 #include <vector>
 #include "../tools/ToLowerCase.cpp"
+
+using namespace std;

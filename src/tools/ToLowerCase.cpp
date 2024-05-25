@@ -1,7 +1,4 @@
-#include <string>
-#include <vector>
-
-using namespace std;
+#include <ToLowerCase.h>
 
 string toLowerCase(string str)
 {

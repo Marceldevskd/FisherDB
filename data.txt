@@ -1,3 +1,3 @@
-"banana","fruit"
-"worm","animal"
-"computer","technology"
+banana,"fruit"
+worm,"animal"
+computer,"technology"
