@@ -1,19 +1,9 @@
-#include <fstream>
-#include <string>
-#include <vector>
-#include <iostream>
+// DBOpener.cpp
+#include "DBOpener.h"
 
-using namespace std;
-
-struct DataObject
+DBDataStruct DBOpener(string dbPath)
 {
-	string dbPath;
-	vector<string> tables;
-};
-
-DataObject DBOpener(string dbPath)
-{
-	DataObject data;
+	DBDataStruct data;
 	ifstream file(dbPath);
 	if (file.is_open())
 	{

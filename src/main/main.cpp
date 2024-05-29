@@ -1,3 +1,4 @@
+// main.cpp
 #include "main.h"
 
 const string dbPath = "C:/Users/Marcel/Documents/GitHub/FisherDB/db";
@@ -38,11 +39,6 @@ int main()
 			}
 			break;
 		}
-		else if (modeInput == "create" || modeInput == "c")
-		{
-			mode = "create";
-			break;
-		}
 		else if (modeInput == "exit")
 		{
 			cout << endl << "Exiting..." << endl;
@@ -52,7 +48,6 @@ int main()
 		{
 			cout << "Error: Please enter 'open' or 'create'." << endl;
 		}
-
 	}
 	return 0;
 }

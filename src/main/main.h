@@ -1,3 +1,7 @@
+// main.h
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,3 +12,5 @@
 #include "../tools/DBOpener.cpp"
 
 using namespace std;
+
+#endif // MAIN_H
