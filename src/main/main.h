@@ -7,9 +7,9 @@
 #include <string>
 #include <sstream>
 #include <vector>
-#include "../tools/ToLowerCase.cpp"
-#include "../tools/QueryRunnerSelector.cpp"
-#include "../tools/DBOpener.cpp"
+#include "../tools/to_lower_case.cpp"
+#include "../tools/query_runner_selector.cpp"
+#include "../tools/db_opener.cpp"
 
 using namespace std;
 

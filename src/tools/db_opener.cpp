@@ -1,7 +1,7 @@
 // DBOpener.cpp
-#include "DBOpener.h"
+#include "db_opener.h"
 
-DBDataStruct DBOpener(string dbPath)
+DBDataStruct dbOpener(string dbPath)
 {
 	DBDataStruct data;
 	ifstream file(dbPath);

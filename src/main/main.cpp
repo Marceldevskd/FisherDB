@@ -1,7 +1,7 @@
 // main.cpp
 #include "main.h"
 
-const string dbPath = "C:/Users/Marcel/Documents/GitHub/FisherDB/db";
+const string DB_PATH = "C:/Users/Marcel/Documents/GitHub/FisherDB/db";
 
 int main()
 {
@@ -33,7 +33,7 @@ int main()
 				else
 				{
 					cout << "Opening db " << dbName << "..." << endl;
-					DBOpener(dbPath + "/" + dbName + "/" +".fisherDB.txt");
+					dbOpener(DB_PATH + "/" + dbName + "/" +".fisherDB.txt");
 					break;
 				}
 			}

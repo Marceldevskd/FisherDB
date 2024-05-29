@@ -1,4 +1,4 @@
-#include "ToLowerCase.h"
+#include "to_lower_case.h"
 
 string toLowerCase(string str)
 {
