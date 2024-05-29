@@ -2,46 +2,33 @@
 
 A hobby SQL based database system made in c++  
 
-Example file structure:  
+## Important notes
 
-```md
-- FisherDB
-  - src
-    - query_runners
-      - create
-        - CreateQueryRunner.cpp
-        - CreateQueryRunner.h
-      - read
-        - ReadQueryRunner.cpp
-        - ReadQueryRunner.h
-      - update
-        - UpdateQueryRunner.cpp
-        - UpdateQueryRunner.h
-      - delete
-        - DeleteQueryRunner.cpp
-        - DeleteQueryRunner.h
-    - tools
-      - StringUtils.cpp
-      - StringUtils.h
-      - DataValidation.cpp
-      - DataValidation.h
-      - DBConnection.cpp
-      - DBConnection.h
-      - Logging.cpp
-      - Logging.h
-    - config
-      - DBConfig.h
-      - Settings.h
-    - main
-      - main.cpp
-  - tests
-    - test_create.cpp
-    - test_read.cpp
-    - test_update.cpp
-    - test_delete.cpp
-    - test_string_utils.cpp
-  - docs
-    - README.md
-    - API.md
-    - setup_guide.md
-```
+- Every file should be started with the filename like this:  
+
+```cpp  
+// main.cpp
+#include <main.h>
+...
+```  
+
+or  
+
+```h  
+// main.h
+#include <string>
+...
+```  
+
+- Naming conventions:
+  - Filenames: snake_case
+  - Variables: camelCase
+  - Objects or Classes: PascalCase
+  - Functions: camelCase
+  - Constants: UPPER_CASE
+  - Macros or Preprocessor Directives: UPPER_CASE
+
+- Comments:
+  - Describe each function before you define it
+  - Describe loops
+  - Describe the function of a variable or constant if needed
