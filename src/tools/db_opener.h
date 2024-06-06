@@ -3,7 +3,7 @@
 #define DBOPENER_H
 
 #include <string>
-#include "structures.h"
+#include "../Structures.h"
 #include <iostream>
 #include <fstream>
 
