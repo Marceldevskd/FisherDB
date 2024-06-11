@@ -1,10 +1,13 @@
 // main.cpp
 #include "main.h"
 
-const string DB_PATH = "C:/Users/Marcel/Documents/GitHub/FisherDB/db";
 
 int main()
 {
+	_putenv("PATH=C:/Users/Marcel/Documents/GitHub/FisherDB/db");
+
+	const string DB_PATH = getenv("PATH");
+
 	cout << "Welcome to FisherDB!" << endl;
 
 	// select mode: "open" or "create"
@@ -28,7 +31,7 @@ int main()
 				{
 					cout << endl
 						  << "Exiting..." << endl;
-					return 0;
+					return EXIT_SUCCESS;
 				}
 				else
 				{
@@ -42,12 +45,12 @@ int main()
 		else if (modeInput == "exit")
 		{
 			cout << endl << "Exiting..." << endl;
-			return 0;
+			return EXIT_SUCCESS;
 		}
 		else
 		{
 			cout << "Error: Please enter 'open' or 'create'." << endl;
 		}
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }

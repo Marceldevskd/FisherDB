@@ -9,6 +9,7 @@ struct DBDataStruct
 {
 	std::string dbPath;
 	std::vector<std::string> tables;
+	int error;
 };
 
 #endif
