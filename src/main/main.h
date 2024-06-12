@@ -1,6 +1,5 @@
 // main.h
-#ifndef MAIN_H
-#define MAIN_H
+#pragma once
 
 #include <iostream>
 #include <fstream>
@@ -15,5 +14,3 @@
 #include "../tools/db_builder.cpp"
 
 using namespace std;
-
-#endif // MAIN_H

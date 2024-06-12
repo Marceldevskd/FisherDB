@@ -1,7 +1,11 @@
 #ifndef TO_LOWER_CASE_H
 #define TO_LOWER_CASE_H
+using namespace std;
+
 #include <string>
 #include <vector>
+#include <cctype>
+#include <algorithm>
 
-using namespace std;
+
 #endif // TO_LOWER_CASE_H

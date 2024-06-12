@@ -30,19 +30,35 @@ int main()
 				if (dbName == "exit")
 				{
 					cout << endl
-						  << "Exiting..." << endl;
+						<< "Exiting..." << endl;
 					return EXIT_SUCCESS;
 				}
 				else
 				{
 					cout << "Opening db " << dbName << "..." << endl;
-					dbOpener(DB_PATH + "/" + dbName + "/" +".fisherDB.txt");
+					dbOpener(DB_PATH + "/" + dbName + "/" + ".fisherDB.txt");
 					break;
 				}
 			}
-			break;
+			continue;
 		}
-		else if (modeInput == "exit")
+		if (modeInput == "create" || modeInput == "c")
+		{
+			mode = "create";
+			cout << "Creating a new db..." << endl;
+
+			string dbPath = dbBuilder();
+
+			if (dbPath.empty())
+			{
+				cout << "Error: Could not create db." << endl;
+				return EXIT_FAILURE;
+			}
+
+			dbOpener(dbPath);
+			continue;
+		}
+		if (modeInput == "exit")
 		{
 			cout << endl << "Exiting..." << endl;
 			return EXIT_SUCCESS;
