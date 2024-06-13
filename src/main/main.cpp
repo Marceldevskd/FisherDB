@@ -4,7 +4,7 @@
 
 int main()
 {
-	_putenv("PATH=C:/Users/Marcel/Documents/GitHub/FisherDB/db");
+	_putenv("PATH=C:/Users/marce/OneDrive/Documenten/GitHub/FisherDB/db");
 
 	const string DB_PATH = getenv("PATH");
 

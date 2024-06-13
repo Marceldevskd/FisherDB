@@ -4,30 +4,39 @@
 
 const string FAIL = "";
 
-string  dbBuilder()
+// Makes a directory for the db and creates a config file and the table files for the db in the db folder
+string dbBuilder()
 {
-    const string PATH = getenv("PATH");
+    ofstream dbConfigFile;
 
-    cout << "Enter the name of the db you want to create:" << endl;
-    string dbName;
-    cin >> dbName;
+    string fullPath;
+    string configFilename;
+
+    const string PATH = getenv("PATH");
+    while (true)
+    {
+        cout << "Enter the name of the db you want to create:" << endl;
+        string dbName;
+        cin >> dbName;
+
+        fullPath = PATH + "/" + dbName;
+        const char* DB_PATH = fullPath.c_str();
 
     const string FULL_PATH = PATH + "/" + dbName;
     const char* DB_PATH = FULL_PATH.c_str();
 
-    // make directory for the db
-    if (_mkdir(DB_PATH) == 1)
-    {
-        return FAIL; // error
-    }
 
-    // create db config file .FisherDB.txt
-    const string filename = FULL_PATH + "/.FisherDB.txt";
+    
+        // create db config file .FisherDB.txt
+        configFilename = fullPath + "/.FisherDB.txt";
 
-    ofstream dbConfigFile(filename);
-    if (!dbConfigFile)
-    {
-        return FAIL; // error
+        dbConfigFile.open(configFilename);
+        if (!dbConfigFile)
+        {
+            cout << "Failed to make the database config file." << endl;
+            continue; // error
+        }
+        break;
     }
 
     dbConfigFile << "Tables" << endl;
@@ -56,7 +65,6 @@ string  dbBuilder()
 
         tableName = toLowerCase(tableName);
 
-    std:
         string tableName2 = tableName;
 
         vector<string> forbiddenTableNames = {"tables", "endtables", "fisherdb"};
@@ -65,8 +73,7 @@ string  dbBuilder()
             cout << "Error: Table name is forbidden, try again." << endl;
             continue; // error
         }
-
-        const string tablePath = FULL_PATH + "/" + tableName + ".txt"; // NOLINT(*-inefficient-string-concatenation)
+        const string tablePath = fullPath + "/" + tableName + ".txt"; // NOLINT(*-inefficient-string-concatenation)
 
         if (const ofstream outfile(tablePath); !outfile)
         {
@@ -75,10 +82,11 @@ string  dbBuilder()
         }
 
         dbConfigFile << tableName << endl;
+        forbiddenTableNames.push_back(tableName);
     }
 
     cout << "Database created successfully." << endl;
     cout << "Opening the database..." << endl;
 
-    return filename;
+    return configFilename;
 }
