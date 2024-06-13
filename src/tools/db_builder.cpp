@@ -22,8 +22,12 @@ string dbBuilder()
         fullPath = PATH + "/" + dbName;
         const char* DB_PATH = fullPath.c_str();
 
-    const string FULL_PATH = PATH + "/" + dbName;
-    const char* DB_PATH = FULL_PATH.c_str();
+        // make directory for the db
+        if (_mkdir(DB_PATH) == 1)
+        {
+            cout << "The database name is invalid try again." << endl;
+            continue; // error
+        }
 
 
     
