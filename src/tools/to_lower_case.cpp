@@ -1,10 +1,7 @@
 #include "to_lower_case.h"
 
-string toLowerCase(string str)
-{
-	for (int i = 0; i < str.length(); i++)
-	{
-		str[i] = tolower(str[i]);
-	}
-	return str;
+string toLowerCase(string str) {
+	string lowerStr;
+	transform(str.begin(), str.end(), back_inserter(lowerStr), ::tolower);
+	return lowerStr;
 }

@@ -7,5 +7,10 @@ using namespace std;
 #include <fstream>
 #include <direct.h>
 #include <cstdlib>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <string>
+
 
 #endif //DB_BUILDER_H
