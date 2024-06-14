@@ -9,6 +9,7 @@ int main()
 	const string DB_PATH = getenv("PATH");
 
 	cout << "Welcome to FisherDB!" << endl;
+	cout << "Type 'exit' to exit the program." << endl;
 
 	// select mode: "open" or "create"
 	while (true)
